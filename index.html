@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>MQTT Data Display</title>
+    <script src="https://cdn.jsdelivr.net/npm/mqtt/dist/mqtt.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="main">
+            <article class="forecast-card article">
+                <div class="forecast-card-avatar">
+                    <img src="./images/sun.png" alt="avatar">
+                    <div class="name">
+                        <p>Прогноз погоди</p>
+                    </div>
+                </div>
+                <div class="period-time">
+                    <nav class="nav">
+                        <ul>
+                            <li><a class="temperatures" href="#">Температура</a></li>
+                            <li><a class="cloudiness" href="#">Хмарність</a></li>
+                            <li><a class="visibility" href="#">Видимість</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </article>
+            <article class="temperature-card article">
+                <div class="background-image">
+                </div>
+                <div class="date-info">
+                    <div class="date-info-top">
+                        <p>Температура</p>
+                    </div>
+                    <div class="date-info-bottom">
+                        <p class="current-data temperature"></p>
+                    </div>
+                </div>
+            </article>
+            <article class="humidity-card article">
+                <div class="background-image">
+                </div>
+                <div class="date-info">
+                    <div class="date-info-top">
+                        <p>Вологість повітря</p>
+                    </div>
+                    <div class="date-info-bottom">
+                        <p class="current-data humidity"></p>
+                    </div>
+                </div>
+            </article>
+            <article class="pressure-card article">
+                <div class="background-image">
+                </div>
+                <div class="date-info">
+                    <div class="date-info-top">
+                        <p>Тиск повітря</p>
+                    </div>
+                    <div class="date-info-bottom">
+                        <p class="current-data pressure"></p>
+                    </div>
+                </div>
+            </article>
+            <article class="temperature-graph-card article graph-card">
+                <div class="background-image">
+                </div>
+                <div class="date-info">
+                </div>
+            </article>
+            <article class="humidity-graph-card article graph-card">
+                <div class="background-image">
+                </div>
+                <div class="date-info">
+                </div>
+            </article>
+            <article class="pressure-graph-card article graph-card">
+                <div class="background-image">
+                </div>
+                <div class="date-info">
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
